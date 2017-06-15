@@ -7,8 +7,8 @@ object Form1: TForm1
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
-  Font.Name = 'Tahoma'
+  Font.Height = -21
+  Font.Name = 'ZX Spectrum-7'
   Font.Style = []
   OldCreateOrder = False
   Visible = True
