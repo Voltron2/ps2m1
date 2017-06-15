@@ -1,0 +1,42 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <System.ImageList.hpp>
+#include <Vcl.ImgList.hpp>
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TImageList *ImageList1;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+};
+class TMyClass0 : public TComponent
+{
+private:
+
+protected:
+
+public:
+AnsiString name;
+
+TMyClass0(){};
+TMyClass0(AnsiString arg1){
+name=arg1;
+
+};
+
+__published:
+
+}hero1[8];
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif
