@@ -1,45 +1,52 @@
-//---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 
 #ifndef Unit1H
 #define Unit1H
-//---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
 #include <System.ImageList.hpp>
 #include <Vcl.ImgList.hpp>
-//---------------------------------------------------------------------------
-class TForm1 : public TForm
-{
-__published:	// IDE-managed Components
+
+// ---------------------------------------------------------------------------
+class TForm1 : public TForm {
+__published: // IDE-managed Components
 	TImageList *ImageList1;
+	TListBox *ListBox1;
+
 	void __fastcall FormPaint(TObject *Sender);
-private:	// User declarations
-public:		// User declarations
+	void __fastcall ListBox1Click(TObject *Sender);
+
+private: // User declarations
+public: // User declarations
 	__fastcall TForm1(TComponent* Owner);
 
-	//my
-class Theroes
-{
-private:
+	// my
+	class Theroes {
+	private:
 
-public:
-AnsiString name;
-int face;
-int job;
+	public:
+		AnsiString name;
+		int face;
+		int job;
 		int level;
 
-Theroes(){};
-Theroes(AnsiString arg1,int arg2){
-name=arg1;
-face=arg2;
-level=1;
+		Theroes() {
+		};
 
-};
-Theroes_status(){
-};
-}hero1[8];
+		Theroes(AnsiString arg1, int arg2) {
+			name = arg1;
+			face = arg2;
+			level = 1;
+
+		};
+
+		Theroes_status() {
+		};
+	} hero1[8];
+
 	class Tjob {
 	private:
 
@@ -59,8 +66,8 @@ Theroes_status(){
 		Tjob() {
 		};
 
-		Tjob(AnsiString arg0, int arg1, int arg2, int arg3, int arg4,
-			int arg5, int arg6, int arg7, int arg8, int arg9, int arg10) {
+		Tjob(AnsiString arg0, int arg1, int arg2, int arg3, int arg4, int arg5,
+			int arg6, int arg7, int arg8, int arg9, int arg10) {
 			name = arg0;
 			exp[0] = 0;
 			int i = 1;
@@ -84,7 +91,7 @@ Theroes_status(){
 
 };
 
-//---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 extern PACKAGE TForm1 *Form1;
-//---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 #endif

@@ -1,0 +1,90 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <System.ImageList.hpp>
+#include <Vcl.ImgList.hpp>
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TImageList *ImageList1;
+	void __fastcall FormPaint(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+
+	//my
+class Theroes
+{
+private:
+
+public:
+AnsiString name;
+int face;
+int job;
+		int level;
+
+Theroes(){};
+Theroes(AnsiString arg1,int arg2){
+name=arg1;
+face=arg2;
+level=1;
+
+};
+Theroes_status(){
+};
+}hero1[8];
+	class Tjob {
+	private:
+
+	public:
+		AnsiString name;
+		unsigned int exp[50];
+		unsigned int hp[50];
+		unsigned int tp[50];
+		unsigned int STRNGTH[50];
+		unsigned int MENTAL[50];
+		unsigned int AGILITY[50];
+		unsigned int LUCK[50];
+		unsigned int DEXTRTY[50];
+		unsigned int ATTACK[50];
+		unsigned int DEFENSE[50];
+
+		Tjob() {
+		};
+
+		Tjob(AnsiString arg0, int arg1, int arg2, int arg3, int arg4,
+			int arg5, int arg6, int arg7, int arg8, int arg9, int arg10) {
+			name = arg0;
+			exp[0] = 0;
+			int i = 1;
+			while (i < 50) {
+				exp[i] = arg1 * i;
+				hp[i] = arg2 * i;
+				tp[i] = arg3 * i;
+				STRNGTH[i] = arg4 * i;
+				MENTAL[i] = arg5 * i;
+				AGILITY[i] = arg6 * i;
+				LUCK[i] = arg7 * i;
+				DEXTRTY[i] = arg8 * i;
+				ATTACK[i] = arg9 * i;
+				DEFENSE[i] = arg10 * i;
+				i++;
+			};
+			hp[0] = hp[1];
+			tp[0] = tp[1];
+		};
+	} class_h[8];
+
+};
+
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif
