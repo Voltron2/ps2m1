@@ -15,6 +15,7 @@ class TForm1 : public TForm {
 __published: // IDE-managed Components
 	TImageList *ImageList1;
 	TListBox *ListBox1;
+	TImageList *ImageList2;
 
 	void __fastcall FormPaint(TObject *Sender);
 	void __fastcall ListBox1Click(TObject *Sender);
@@ -88,6 +89,39 @@ public: // User declarations
 			tp[0] = tp[1];
 		};
 	} class_h[8];
+
+	void show_m1(int x1, int y1, int w1, int h1) {
+		int x0, y0;
+		for (x0 = 0; x0 < w1; x0++) {
+			for (y0 = 0; y0 < h1; y0++) {
+				ImageList2->Draw(Canvas, x1*8 + x0*8, y1*8 + y0*8, 8, 1);
+				if ((y0 + 1) == h1) {
+					ImageList2->Draw(Canvas, x1*8 + x0*8, y1*8 + y0*8, 7, 1);
+				};
+				if ((x0 + 1) == w1) {
+					ImageList2->Draw(Canvas, x1*8 + x0*8, y1*8 + y0*8, 5, 1);
+				};
+				if (x0 > 0 && y0 == 0) {
+					ImageList2->Draw(Canvas, x1*8 + x0*8, y1*8, 6, 1);
+				};
+				if (x0 == 0) {
+					ImageList2->Draw(Canvas, x1*8 + x0*8, y1*8 + y0*8, 4, 1);
+				};
+				if (y0 == 0 && x0 == 0) {
+					ImageList2->Draw(Canvas, x1*8 + x0*8, y1*8 + y0*8, 0, 1);
+				};
+				if ((y0 + 1) == h1 && x0 == 0) {
+					ImageList2->Draw(Canvas, x1*8 + x0*8, y1*8 + y0*8, 2, 1);
+				};
+				if ((x0 + 1) == w1 && y0 == 0) {
+					ImageList2->Draw(Canvas, x1*8 + x0*8, y1*8, 1, 1);
+				};
+				if ((x0 + 1) == w1 && (y0 + 1) == h1) {
+					ImageList2->Draw(Canvas, x1*8 + x0*8, y1*8 + y0*8, 3, 1);
+				};
+			};
+		};
+	};
 
 };
 

@@ -16,11 +16,10 @@ ModuleType=TSourceModule
 ModuleType=TURLModule
 
 [EditWindow0]
-ViewCount=3
+ViewCount=2
 CurrentEditView=C:\Users\voltron\Documents\Embarcadero\Studio\Projects\ps2m1\Unit1.cpp
 View0=0
 View1=1
-View2=2
 PercentageSizes=1
 Create=1
 Visible=1
@@ -57,16 +56,13 @@ WelcomePageURL=bds:/default.htm
 [View1]
 CustomEditViewType=TEditView
 Module=C:\Users\voltron\Documents\Embarcadero\Studio\Projects\ps2m1\Unit1.cpp
-CursorX=1
-CursorY=37
-TopLine=11
+CursorX=5
+CursorY=45
+TopLine=22
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=C:\Users\voltron\Documents\Embarcadero\Studio\Projects\ps2m1\Unit1.cpp
-
-[View2]
-CustomEditViewType=TOTACustomEditView
 
 [UndockedDesigner]
 Count=0
@@ -298,8 +294,8 @@ SplitPos=111
 
 [PropInspDesignerSelection]
 ArrangeBy=Name
-SelectedItem=Font.Size,Action
-ExpandedItems=Anchors=0,BorderIcons=0,Constraints=0,Font=1,GlassFrame=0,HorzScrollBar=0,LiveBindings=0,"LiveBindings Designer=0",Margins=0,Padding=0,StyleElements=0,Touch=0,VertScrollBar=0,Font.Style=0
+SelectedItem=Height,OnClick
+ExpandedItems=LiveBindings=0,"LiveBindings Designer=0",Margins=0,StyleElements=0,Touch=0,Font=0,Constraints=0,Font.Style=0,Anchors=0,BevelEdges=0
 
 [frmDesignPreview]
 PercentageSizes=1

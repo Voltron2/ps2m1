@@ -41,46 +41,64 @@ __fastcall TForm1::TForm1(TComponent* Owner) : TForm(Owner) {
 	ListBox1->AddItem("Anna Zirski", 0);
 	ListBox1->AddItem("Josh Kain", 0);
 	ListBox1->AddItem("Shir Gold", 0);
-	ListBox1->ItemIndex=0;
+	ListBox1->ItemIndex = 0;
 
 }
 
 // ---------------------------------------------------------------------------
 void __fastcall TForm1::FormPaint(TObject *Sender) {
 
-	ImageList1->Draw(Canvas, 8*9, 8*1, hero1[ListBox1->ItemIndex ].face, 1);
-	Canvas->TextOutW(8*9, 8*13, hero1[ListBox1->ItemIndex].name);
-	Canvas->TextOutW(8*9, 8*15, class_h[ListBox1->ItemIndex].name);
-	Canvas->TextOutW(8*1, 8*17, "LV      " + IntToStr(hero1[ListBox1->ItemIndex].level));
-	Canvas->TextOutW(8*1, 8*19, "EXP     " + UIntToStr(class_h[ListBox1->ItemIndex].exp[0]) +
-		"/" + UIntToStr(class_h[ListBox1->ItemIndex].exp[hero1[ListBox1->ItemIndex].level]));
-	Canvas->TextOutW(8*1, 8*21, "HP      " + UIntToStr(class_h[ListBox1->ItemIndex].hp[0]) + "/" +
-		UIntToStr(class_h[ListBox1->ItemIndex].hp[hero1[ListBox1->ItemIndex].level]));
-	Canvas->TextOutW(8*1, 8*23, "TP      " + UIntToStr(class_h[ListBox1->ItemIndex].tp[0]) + "/" +
-		UIntToStr(class_h[ListBox1->ItemIndex].tp[hero1[ListBox1->ItemIndex].level]));
-	Canvas->TextOutW(8*1, 8*25,
-		"STRNGTH " + UIntToStr(class_h[ListBox1->ItemIndex].STRNGTH[hero1[ListBox1->ItemIndex].level]));
-	Canvas->TextOutW(8*1, 8*27,
-		"MENTAL  " + UIntToStr(class_h[ListBox1->ItemIndex].MENTAL[hero1[ListBox1->ItemIndex].level]));
-	Canvas->TextOutW(8*1, 8*29,
-		"AGILITY " + UIntToStr(class_h[ListBox1->ItemIndex].AGILITY[hero1[ListBox1->ItemIndex].level]));
-	Canvas->TextOutW(8*1, 8*31,
-		"LUCK    " + UIntToStr(class_h[ListBox1->ItemIndex].LUCK[hero1[ListBox1->ItemIndex].level]));
-	Canvas->TextOutW(8*1, 8*33,
-		"DEXTRTY " + UIntToStr(class_h[ListBox1->ItemIndex].DEXTRTY[hero1[ListBox1->ItemIndex].level]));
-	Canvas->TextOutW(8*1, 8*35,
-		"ATTACK  " + UIntToStr(class_h[ListBox1->ItemIndex].ATTACK[hero1[ListBox1->ItemIndex].level]));
-	Canvas->TextOutW(8*1, 8*37,
-		"DEFENSE " + UIntToStr(class_h[ListBox1->ItemIndex].DEFENSE[hero1[ListBox1->ItemIndex].level]));
 
-	ListBox1->Left = 8 * 23;
-	ListBox1->Top = 8 * 1;
+	// Canvas->Refresh();
+	// Sleep(1000);
+	show_m1(1, 1, 50, 50);
 
+	ImageList1->Draw(Canvas, 8*10, 8*2, hero1[ListBox1->ItemIndex].face, 1);
+	Canvas->TextOutW(8*10, 8*14, hero1[ListBox1->ItemIndex].name);
+	Canvas->TextOutW(8*10, 8*16, class_h[ListBox1->ItemIndex].name);
+	Canvas->TextOutW(8*2, 8*18,
+		"LV      " + IntToStr(hero1[ListBox1->ItemIndex].level));
+	Canvas->TextOutW(8*2, 8*20,
+		"EXP     " + UIntToStr(class_h[ListBox1->ItemIndex].exp[0]) + "/" +
+		UIntToStr(class_h[ListBox1->ItemIndex].exp[hero1[ListBox1->ItemIndex]
+		.level]));
+	Canvas->TextOutW(8*2, 8*22,
+		"HP      " + UIntToStr(class_h[ListBox1->ItemIndex].hp[0]) + "/" +
+		UIntToStr(class_h[ListBox1->ItemIndex].hp[hero1[ListBox1->ItemIndex]
+		.level]));
+	Canvas->TextOutW(8*2, 8*24,
+		"TP      " + UIntToStr(class_h[ListBox1->ItemIndex].tp[0]) + "/" +
+		UIntToStr(class_h[ListBox1->ItemIndex].tp[hero1[ListBox1->ItemIndex]
+		.level]));
+	Canvas->TextOutW(8*2, 8*26,
+		"STRNGTH " + UIntToStr(class_h[ListBox1->ItemIndex].STRNGTH
+		[hero1[ListBox1->ItemIndex].level]));
+	Canvas->TextOutW(8*2, 8*28,
+		"MENTAL  " + UIntToStr(class_h[ListBox1->ItemIndex].MENTAL
+		[hero1[ListBox1->ItemIndex].level]));
+	Canvas->TextOutW(8*2, 8*30,
+		"AGILITY " + UIntToStr(class_h[ListBox1->ItemIndex].AGILITY
+		[hero1[ListBox1->ItemIndex].level]));
+	Canvas->TextOutW(8*2, 8*32,
+		"LUCK    " + UIntToStr(class_h[ListBox1->ItemIndex].LUCK
+		[hero1[ListBox1->ItemIndex].level]));
+	Canvas->TextOutW(8*2, 8*34,
+		"DEXTRTY " + UIntToStr(class_h[ListBox1->ItemIndex].DEXTRTY
+		[hero1[ListBox1->ItemIndex].level]));
+	Canvas->TextOutW(8*2, 8*36,
+		"ATTACK  " + UIntToStr(class_h[ListBox1->ItemIndex].ATTACK
+		[hero1[ListBox1->ItemIndex].level]));
+	Canvas->TextOutW(8*2, 8*38,
+		"DEFENSE " + UIntToStr(class_h[ListBox1->ItemIndex].DEFENSE
+		[hero1[ListBox1->ItemIndex].level]));
+
+	ListBox1->Left = 8 * 24;
+	ListBox1->Top = 8 * 2;
+
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TForm1::ListBox1Click(TObject *Sender) {
+	Repaint();
 }
 // ---------------------------------------------------------------------------
-void __fastcall TForm1::ListBox1Click(TObject *Sender)
-{
-Repaint();
-}
-//---------------------------------------------------------------------------
-
